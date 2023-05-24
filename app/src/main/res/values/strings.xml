@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">VsemSushi</string>
     <string name="logo">Логотип</string>
+    <string name="enter_header">Вход</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="enter">Войти</string>
+    <string name="registration">Регистрация</string>
 </resources>

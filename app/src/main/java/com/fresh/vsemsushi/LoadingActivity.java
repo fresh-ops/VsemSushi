@@ -14,7 +14,7 @@ public class LoadingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_loading);
         ImageView logo = findViewById(R.id.loading_logo);
         logo.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
     }

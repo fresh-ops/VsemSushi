@@ -4,15 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:paddingHorizontal="20dp"
+    tools:context=".LoginActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="vertical"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_rounded_rect"
+        android:backgroundTint="#eeeeee">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/enter_header"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        
+        <EditText
+            android:id="@+id/enter_login_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingHorizontal="8dp"
+            android:textSize="18sp"
+            android:hint="@string/enter_login"
+            android:autofillHints="username"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/shape_rounded_rect"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/enter_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingHorizontal="8dp"
+            android:textSize="18sp"
+            android:hint="@string/enter_password"
+            android:autofillHints="password"
+            android:inputType="textPassword"
+            android:background="@drawable/shape_rounded_rect"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/enter_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/enter"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/register_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:backgroundTint="?attr/colorSecondary"
+            android:text="@string/registration"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
