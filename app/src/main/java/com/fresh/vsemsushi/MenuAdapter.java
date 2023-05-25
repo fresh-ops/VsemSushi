@@ -1,6 +1,7 @@
 package com.fresh.vsemsushi;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -33,6 +35,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         MenuItem item = list.get(position);
         holder.image.setImageResource(item.getImageId());
         holder.name.setText(item.getName());
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, FoodActivity.class);
+                intent.putExtra("MenuCategory", item.getName());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -43,12 +53,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView image;
         private final TextView name;
+        private final ConstraintLayout card;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             image = itemView.findViewById(R.id.item_image);
             name = itemView.findViewById(R.id.item_name);
+            card = itemView.findViewById(R.id.menu_card);
         }
     }
 }
