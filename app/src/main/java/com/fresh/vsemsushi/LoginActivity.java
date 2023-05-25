@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         login = findViewById(R.id.enter_login_input);
         password = findViewById(R.id.enter_password_input);
@@ -40,7 +40,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             String passwordText = password.getText().toString();
             if (passwordText.equals("")) {
                 Toast.makeText(this, "Введите пароль", Toast.LENGTH_SHORT).show();
+                return;
             }
+            Intent intent = new Intent(this, MenuActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.register_user) {
             Intent intent = new Intent(this, RegisterActivity.class);
