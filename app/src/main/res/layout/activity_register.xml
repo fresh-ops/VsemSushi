@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:paddingHorizontal="20dp">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -18,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/shape_rounded_rect"
-        android:backgroundTint="#eeeeee">
+        android:backgroundTint="?attr/colorPrimaryVariant">
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
             android:autofillHints="username"
             android:inputType="textEmailAddress"
             android:background="@drawable/shape_rounded_rect"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/background"
             android:layout_marginBottom="12dp"/>
 
         <EditText
@@ -52,7 +53,7 @@
             android:autofillHints="password"
             android:inputType="textPassword"
             android:background="@drawable/shape_rounded_rect"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/background"
             android:layout_marginBottom="20dp" />
 
         <EditText
@@ -65,7 +66,7 @@
             android:autofillHints="password"
             android:inputType="textPassword"
             android:background="@drawable/shape_rounded_rect"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/background"
             android:layout_marginBottom="20dp" />
 
         <Button
