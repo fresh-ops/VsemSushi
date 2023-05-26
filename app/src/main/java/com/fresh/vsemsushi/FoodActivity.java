@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,7 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FoodActivity extends AppCompatActivity {
+public class FoodActivity extends AppCompatActivity implements View.OnClickListener {
     private FoodAdapter adapter;
     private final List<Food> list = new ArrayList<>();
 
@@ -27,13 +28,10 @@ public class FoodActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
 
-        FloatingActionButton button = findViewById(R.id.back_button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        FloatingActionButton backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(this);
+        FloatingActionButton goToCartButton = findViewById(R.id.go_to_cart);
+        goToCartButton.setOnClickListener(this);
     }
 
     private void fillData() {
@@ -63,6 +61,18 @@ public class FoodActivity extends AppCompatActivity {
             case "Напитки":
                 list.add(new Food(R.drawable.cola,"Кола", 120));
                 break;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if (id == R.id.back_button) {
+            finish();
+        }
+        else if (id == R.id.go_to_cart) {
+            Intent intent = new Intent(this, CartActivity.class);
+            startActivity(intent);
         }
     }
 }

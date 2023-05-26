@@ -8,4 +8,6 @@
     <string name="registration">Регистрация</string>
     <string name="save">Сохранить</string>
     <string name="repeat_password">Повторите пароль</string>
+    <string name="cart">Корзина</string>
+    <string name="clear_cart">Очистить корзину</string>
 </resources>
