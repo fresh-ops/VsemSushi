@@ -51,8 +51,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
             finish();
         }
         else if (id == R.id.buy_all) {
-            cart.clearCart();
-            Intent intent = new Intent(this, LoadingActivity.class);
+            Intent intent = new Intent(this, CheckoutActivity.class);
             startActivity(intent);
         }
         else if (id == R.id.clear_all) {

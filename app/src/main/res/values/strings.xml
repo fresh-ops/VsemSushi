@@ -10,4 +10,9 @@
     <string name="repeat_password">Повторите пароль</string>
     <string name="cart">Корзина</string>
     <string name="clear_cart">Очистить корзину</string>
+    <string name="checkout">Оформление заказа</string>
+    <string name="enter_address">Введите адрес доставки</string>
+    <string name="make_order">Оформить заказ</string>
+    <string name="thanks_for_order">Спасибо за заказ</string>
+    <string name="go_main">Вернуться на главную</string>
 </resources>
