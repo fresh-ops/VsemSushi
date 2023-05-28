@@ -31,14 +31,14 @@
             android:textStyle="bold" />
         
         <EditText
-            android:id="@+id/enter_login_input"
+            android:id="@+id/enter_phone_input"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:paddingHorizontal="8dp"
             android:textSize="18sp"
-            android:hint="@string/enter_login"
+            android:hint="@string/enter_phone"
             android:autofillHints="username"
-            android:inputType="textEmailAddress"
+            android:inputType="phone"
             android:background="@drawable/shape_rounded_rect"
             android:backgroundTint="@color/background"
             android:layout_marginBottom="12dp"/>

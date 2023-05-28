@@ -2,7 +2,7 @@
     <string name="app_name">VsemSushi</string>
     <string name="logo">Логотип</string>
     <string name="enter_header">Вход</string>
-    <string name="enter_login">Введите логин</string>
+    <string name="enter_phone">Введите номер телефона</string>
     <string name="enter_password">Введите пароль</string>
     <string name="enter">Войти</string>
     <string name="registration">Регистрация</string>
@@ -15,4 +15,7 @@
     <string name="make_order">Оформить заказ</string>
     <string name="thanks_for_order">Спасибо за заказ</string>
     <string name="go_main">Вернуться на главную</string>
+    <string name="user_id">ID</string>
+    <string name="user_phone">Телефон</string>
+    <string name="back">Вернуться</string>
 </resources>

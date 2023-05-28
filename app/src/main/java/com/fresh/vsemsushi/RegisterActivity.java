@@ -9,8 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fresh.vsemsushi.models.User;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText login;
+    private EditText phone;
     private EditText password;
     private EditText passwordRepeat;
     private Button save;
@@ -20,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        login = findViewById(R.id.register_login_input);
+        phone = findViewById(R.id.register_phone_input);
         password = findViewById(R.id.register_password_input);
         passwordRepeat = findViewById(R.id.register_password_repeat);
         save = findViewById(R.id.save_user);
@@ -31,8 +33,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.save_user) {
-            String loginText = login.getText().toString();
-            if (loginText.equals("")) {
+            String phoneText = phone.getText().toString();
+            if (phoneText.equals("")) {
                 Toast.makeText(this, "Введите логин", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -50,6 +52,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(this, "Пароли не совподают", Toast.LENGTH_SHORT).show();
                 return;
             }
+
+
+            User user = User.getInstance();
+            user.setPhone(phoneText);
             Intent intent = new Intent(this, MenuActivity.class);
             startActivity(intent);
         }

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.fresh.vsemsushi.adapters.MenuAdapter;
 import com.fresh.vsemsushi.models.MenuItem;
@@ -32,6 +33,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         FloatingActionButton openCart = findViewById(R.id.open_cart);
         openCart.setOnClickListener(this);
+        ImageView user = findViewById(R.id.menu_user);
+        user.setOnClickListener(this);
     }
 
     private void fillData() {
@@ -48,6 +51,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.open_cart) {
             Intent intent = new Intent(this, CartActivity.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.menu_user) {
+            Intent intent = new Intent(this, UserActivity.class);
             startActivity(intent);
         }
     }
