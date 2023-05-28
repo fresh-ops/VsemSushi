@@ -1,4 +1,4 @@
-package com.fresh.vsemsushi;
+package com.fresh.vsemsushi.models;
 
 public class Food {
     private final int imageId;

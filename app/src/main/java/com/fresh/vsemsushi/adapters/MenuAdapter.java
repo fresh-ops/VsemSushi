@@ -1,4 +1,4 @@
-package com.fresh.vsemsushi;
+package com.fresh.vsemsushi.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.fresh.vsemsushi.FoodActivity;
+import com.fresh.vsemsushi.R;
+import com.fresh.vsemsushi.models.MenuItem;
 
 import java.util.List;
 

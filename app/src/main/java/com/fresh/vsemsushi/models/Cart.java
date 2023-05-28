@@ -1,4 +1,4 @@
-package com.fresh.vsemsushi;
+package com.fresh.vsemsushi.models;
 
 import java.util.ArrayList;
 import java.util.List;
