@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
     private MenuAdapter adapter;
     private final List<MenuItem> list = new ArrayList<>();
 
@@ -23,6 +27,9 @@ public class MenuActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.menu);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
+
+        FloatingActionButton openCart = findViewById(R.id.open_cart);
+        openCart.setOnClickListener(this);
     }
 
     private void fillData() {
@@ -31,5 +38,15 @@ public class MenuActivity extends AppCompatActivity {
         list.add(new MenuItem(R.drawable.set, "Сеты"));
         list.add(new MenuItem(R.drawable.snacks, "Закуски"));
         list.add(new MenuItem(R.drawable.drinks, "Напитки"));
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+
+        if (id == R.id.open_cart) {
+            Intent intent = new Intent(this, CartActivity.class);
+            startActivity(intent);
+        }
     }
 }
