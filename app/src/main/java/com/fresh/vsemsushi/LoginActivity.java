@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (id == R.id.enter_user) {
             String phoneText = phone.getText().toString();
             if (phoneText.equals("")) {
-                Toast.makeText(this, "Введите логин", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Введите номер телефона", Toast.LENGTH_SHORT).show();
                 return;
             }
             String passwordText = password.getText().toString();
